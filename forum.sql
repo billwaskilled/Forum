@@ -20,6 +20,10 @@ SET time_zone = "+00:00";
 -- 数据库: `forum`
 --
 
+CREATE DATABASE IF NOT EXISTS forum;
+
+USE forum;
+
 -- --------------------------------------------------------
 
 --
