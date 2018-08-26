@@ -261,7 +261,7 @@ CREATE TABLE IF NOT EXISTS `user` (
 
 INSERT INTO `user` (`id`, `username`, `password`, `email`, `phone_num`, `create_time`, `update_time`, `credit`, `avatar`, `type`) VALUES
 (1, 'likky', 'E10ADC3949BA59ABBE56E057F20F883E', '123456789@126.com', '8615712345678', '2018-02-08 15:06:40', '2018-02-09 07:57:05', 23, '/img/avatar/avatar-default-1.png', 0),
-(2, 'withstars', 'E10ADC3949BA59ABBE56E057F20F883E', '987654321@qq.com', '8616978945612', '2018-01-31 12:16:54', '2018-02-09 07:57:21', 10, '/img/avatar/avatar-default-2.png', 0),
+(2, 'changyingjie', 'E10ADC3949BA59ABBE56E057F20F883E', '987654321@qq.com', '8616978945612', '2018-01-31 12:16:54', '2018-02-09 07:57:21', 10, '/img/avatar/avatar-default-2.png', 0),
 (3, 'yilia', 'E10ADC3949BA59ABBE56E057F20F883E', '147258369@qq.com', '8615963248962', '2018-01-20 06:18:58', '2018-02-09 07:56:29', 0, '/img/avatar/avatar-default-3.png', 0),
 (4, 'sassy', 'E10ADC3949BA59ABBE56E057F20F883E', '159357846@qq.com', '8612543434343', '2018-02-08 14:17:16', '2018-02-09 07:56:39', 156, '/img/avatar/avatar-default-4.png', 0),
 (6, 'objectc', 'A45958517604F5CD90D6EE51AD9CFDB6', '963852741@qq.com', '8619345321598', '2018-02-09 04:36:39', '2018-02-09 07:56:46', 7, '/img/avatar/avatar-default-5.png', 0);
