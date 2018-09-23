@@ -31,4 +31,6 @@ public interface TopicMapper {
 
     //获取主题总数
     int getTopicsNum();
+    //获取该板块的话题数
+    int getTabTopicsNum(Integer tabId);
 }

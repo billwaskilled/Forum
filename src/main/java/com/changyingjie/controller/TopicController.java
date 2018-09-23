@@ -66,6 +66,7 @@ public class TopicController {
         indexPage.addObject("topics",topics);
         indexPage.addObject("hotestTopics",hotestTopics);
         indexPage.addObject("topicsNum",topicsNum);
+        indexPage.addObject("tabtopicsNum",topicsNum);
         indexPage.addObject("usersNum",usersNum);
         indexPage.addObject("user",user);
         return  indexPage;
@@ -89,6 +90,7 @@ public class TopicController {
         int repliesNum=replyService.repliesNum(id);
         //获取统计信息
         int topicsNum=topicService.getTopicsNum();
+        int tabtopicsNum=1;
         int usersNum=userService.getUserCount();
         //获取用户信息
         Integer uid=(Integer) session.getAttribute("userId");
@@ -102,6 +104,7 @@ public class TopicController {
         topicPage.addObject("replies",replies);
         topicPage.addObject("repliesNum",repliesNum);
         topicPage.addObject("topicsNum",topicsNum);
+        topicPage.addObject("tabtopicsNum",tabtopicsNum);
         topicPage.addObject("usersNum",usersNum);
         topicPage.addObject("user",user);
         topicPage.addObject("hotestTopics",hotestTopics);
@@ -122,6 +125,7 @@ public class TopicController {
 
         //获取统计信息
         int topicsNum=topicService.getTopicsNum();
+        int tabtopicsNum=topicService.getTabTopicsNum(tabId);
         int usersNum=userService.getUserCount();
 
         //获取用户信息
@@ -132,6 +136,7 @@ public class TopicController {
 
         indexPage.addObject("topics",topics);
         indexPage.addObject("topicsNum",topicsNum);
+        indexPage.addObject("tabtopicsNum",tabtopicsNum);
         indexPage.addObject("usersNum",usersNum);
         indexPage.addObject("tab",tab);
         indexPage.addObject("user",user);

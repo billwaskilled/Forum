@@ -41,6 +41,8 @@ public class TopicServiceImpl implements TopicService {
         return topicDao.getTopicsNum();
     }
 
+    public int getTabTopicsNum(Integer tabId) {return topicDao.getTabTopicsNum(tabId);}
+
     public List<Topic> listTopicsAndUsers() {
         return topicDao.listTopicsAndUsers();
     }

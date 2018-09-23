@@ -57,6 +57,7 @@ a{
         <ul >
             <li>会员数: ${usersNum}</li>
             <li>话题数: ${topicsNum}</li>
+            <li>该板块话题数: ${tabtopicsNum}</li>
         </ul>
     </div>
     <div class="info">

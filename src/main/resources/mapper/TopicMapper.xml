@@ -104,6 +104,13 @@
     from topic
   </select>
 
+  <select id="getTabTopicsNum" resultType="java.lang.Integer" >
+    select
+    COUNT(tab_id)
+    from topic
+    where tab_id = #{tabId,jdbcType=INTEGER}
+  </select>
+
   <select id="listMostCommentsTopics" resultMap="mostCommentsTopic">
     SELECT topic.id,topic.title,count(reply.id) as count_replies  from topic ,reply  where topic.id = reply.topic_id group by topic.id order by count_replies desc limit 5;
   </select>
