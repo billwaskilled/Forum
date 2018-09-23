@@ -29,6 +29,11 @@ public interface TopicService {
     List<Topic> listTopicsAndUsersOfTab(Integer tabId);
 
     /**
+     * 获取全部精华主题及用户信息 用于渲染精华板块页面
+     */
+    List<Topic> listTopicsAndUsersOfCream();
+
+    /**
      * 获取指定ID主题
      */
     Topic selectById(Integer id);

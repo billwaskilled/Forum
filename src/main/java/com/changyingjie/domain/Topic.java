@@ -31,6 +31,8 @@ public class Topic extends BaseDomain {
 
     private String content;
 
+    private boolean isCream;
+
 
 
 
@@ -131,5 +133,14 @@ public class Topic extends BaseDomain {
         SimpleDateFormat df = new SimpleDateFormat("yyyy-M-dd HH:mm:ss");//设置日期格式
         String date = df.format(updateTime);
         return date;
+    }
+
+
+    public boolean isCream() {
+        return isCream;
+    }
+
+    public void setCream(boolean cream) {
+        isCream = cream;
     }
 }

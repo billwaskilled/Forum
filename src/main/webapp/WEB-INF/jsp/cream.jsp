@@ -56,7 +56,7 @@
 
 <div class="panel panel-default" id="main" style="width: 70%;margin:1% 2% 5% 5%;float: left;">
     <div class="panel-heading" style="background-color: white">
-        <a style="margin-right: 2%">活跃</a><a href="/topic/cream/list" style="margin-right: 2%">精华</a><a style="margin-right: 2%">最近</a>
+        <a style="margin-right: 2%">活跃</a><a style="margin-right: 2%">精华</a><a style="margin-right: 2%">最近</a>
     </div>
 
 <ul class="list-group" style="width: 100%">

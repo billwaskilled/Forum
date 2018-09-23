@@ -205,6 +205,7 @@ CREATE TABLE IF NOT EXISTS `topic` (
   `content` text NOT NULL COMMENT '内容',
   `click` int(11) NOT NULL DEFAULT '0' COMMENT '点击量',
   `tab_id` tinyint(4) NOT NULL COMMENT '发布板块',
+  `is_cream` boolean NOT NULL DEFAULT false COMMENT '是否为精华帖',
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=13 ;
 

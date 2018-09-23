@@ -145,6 +145,36 @@ public class TopicController {
     }
 
     /**
+     * 渲染精华板块页面
+     */
+    @RequestMapping("/topic/cream/list")
+    public ModelAndView toCream(HttpSession session){
+
+        ModelAndView indexPage=new ModelAndView("cream");
+        //全部主题
+        List<Topic> topics=topicService.listTopicsAndUsersOfCream();
+
+        //获取统计信息
+        int topicsNum=topicService.getTopicsNum();
+        int usersNum=userService.getUserCount();
+
+        //获取用户信息
+        Integer uid=(Integer) session.getAttribute("userId");
+        User user=userService.getUserById(uid);
+        //最热主题
+        List<Topic> hotestTopics=topicService.listMostCommentsTopics();
+
+        indexPage.addObject("topics",topics);
+        indexPage.addObject("topicsNum",topicsNum);
+        indexPage.addObject("usersNum",usersNum);
+        indexPage.addObject("user",user);
+        indexPage.addObject("hotestTopics",hotestTopics);
+        return  indexPage;
+    }
+
+
+
+    /**
      * 发表主题
      * @param request
      * @param session

@@ -50,4 +50,6 @@ public class TopicServiceImpl implements TopicService {
     public List<Topic> listTopicsAndUsersOfTab(Integer tabId) {
         return topicDao.listTopicsAndUsersOfTab(tabId);
     }
+
+    public List<Topic> listTopicsAndUsersOfCream() {return topicDao.listTopicsAndUsersOfCream();}
 }

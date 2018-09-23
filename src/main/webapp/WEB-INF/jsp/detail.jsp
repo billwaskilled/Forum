@@ -97,6 +97,16 @@
 </div>
 </c:if>
 
+    <c:if test="${!empty user}">
+
+        <div class="panel panel-default" id="main" style="">
+            <div class="panel-heading" style="background-color: white">
+                添加为精华贴
+                <a href="/member/${topic.user.username}"><span ><strong>${topic.user.username}</strong></span></a>&nbsp;&nbsp;
+            </div>
+        </div>
+    </c:if>
+
 </div>
 <!-- 引入侧边栏文件 -->
 <%@ include file="side.jsp"%>
