@@ -1,6 +1,7 @@
 package com.changyingjie.dao;
 
 import com.changyingjie.domain.Topic;
+import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
@@ -33,6 +34,9 @@ public interface TopicMapper {
 
     //获取主题总数
     int getTopicsNum();
+
     //获取该板块的话题数
     int getTabTopicsNum(Integer tabId);
+
+    int getTabTopicsNum();
 }

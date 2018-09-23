@@ -156,6 +156,7 @@ public class TopicController {
 
         //获取统计信息
         int topicsNum=topicService.getTopicsNum();
+        int tabtopicsNum=topicService.getTabTopicsNum();
         int usersNum=userService.getUserCount();
 
         //获取用户信息
@@ -166,6 +167,7 @@ public class TopicController {
 
         indexPage.addObject("topics",topics);
         indexPage.addObject("topicsNum",topicsNum);
+        indexPage.addObject("tabtopicsNum",tabtopicsNum);
         indexPage.addObject("usersNum",usersNum);
         indexPage.addObject("user",user);
         indexPage.addObject("hotestTopics",hotestTopics);

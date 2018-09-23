@@ -57,4 +57,11 @@ public interface TopicService {
      * 获取该板块的话题总数
      */
     int getTabTopicsNum(Integer tabId);
+
+    /**
+     * 获取精华板块的话题总数
+     */
+    int getTabTopicsNum();
+
+
 }

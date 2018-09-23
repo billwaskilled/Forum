@@ -112,10 +112,18 @@
   </select>
 
   <select id="getTabTopicsNum" resultType="java.lang.Integer" >
-    select
-    COUNT(tab_id)
-    from topic
-    where tab_id = #{tabId,jdbcType=INTEGER}
+    <if test="_parameter!=null">
+      select
+      COUNT(tab_id)
+      from topic
+      where tab_id = #{_parameter,jdbcType=INTEGER}
+    </if>
+    <if test="_parameter==null">
+      select
+      COUNT(id)
+      from topic
+      where is_cream=1
+    </if>
   </select>
 
   <select id="listMostCommentsTopics" resultMap="mostCommentsTopic">
