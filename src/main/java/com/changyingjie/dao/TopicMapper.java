@@ -39,4 +39,7 @@ public interface TopicMapper {
     int getTabTopicsNum(Integer tabId);
 
     int getTabTopicsNum();
+
+    //判断是否为精华帖并操作
+    void judgeCream(@Param("topicId") Integer topicId,@Param("value") Integer value);
 }

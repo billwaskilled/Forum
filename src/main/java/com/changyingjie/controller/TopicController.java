@@ -174,6 +174,48 @@ public class TopicController {
         return  indexPage;
     }
 
+    /**
+     * 渲染置为精华板块页面
+     */
+    @RequestMapping("/topic/cream/{topicId}/{value}")
+    public ModelAndView toAsCreanm(@PathVariable("topicId")Integer topicId,@PathVariable("value")Integer value,HttpSession session){
+//        //点击量加一
+//        boolean ifSucc=topicService.clickAddOne(topicId);
+
+        //根据value值返回不同方法
+        //置为精华
+        //取消精华
+        topicService.judgeCream(topicId,value);
+
+        //获取主题信息
+        Topic topic=topicService.selectById(topicId);
+        //获取主题全部评论
+        List<Reply> replies=replyService.getRepliesOfTopic(topicId);
+        //获取评论数
+        int repliesNum=replyService.repliesNum(topicId);
+        //获取统计信息
+        int topicsNum=topicService.getTopicsNum();
+        int tabtopicsNum=1;
+        int usersNum=userService.getUserCount();
+        //获取用户信息
+        Integer uid=(Integer) session.getAttribute("userId");
+        User user=userService.getUserById(uid);
+        //最热主题
+        List<Topic> hotestTopics=topicService.listMostCommentsTopics();
+
+        //渲染视图
+        ModelAndView topicPage=new ModelAndView("detail");
+        topicPage.addObject("topic",topic);
+        topicPage.addObject("replies",replies);
+        topicPage.addObject("repliesNum",repliesNum);
+        topicPage.addObject("topicsNum",topicsNum);
+        topicPage.addObject("tabtopicsNum",tabtopicsNum);
+        topicPage.addObject("usersNum",usersNum);
+        topicPage.addObject("user",user);
+        topicPage.addObject("hotestTopics",hotestTopics);
+        return topicPage;
+    }
+
 
 
     /**

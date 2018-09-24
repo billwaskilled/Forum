@@ -63,5 +63,10 @@ public interface TopicService {
      */
     int getTabTopicsNum();
 
+    /**
+     * 判断是否为精华帖并进行操作
+     */
+    void judgeCream(Integer topicId,Integer value);
+
 
 }

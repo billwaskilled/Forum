@@ -97,15 +97,11 @@
 </div>
 </c:if>
 
-    <c:if test="${!empty user}">
-
-        <div class="panel panel-default" id="main" style="">
-            <div class="panel-heading" style="background-color: white">
-                添加为精华贴
-                <a href="/member/${topic.user.username}"><span ><strong>${topic.user.username}</strong></span></a>&nbsp;&nbsp;
-            </div>
-        </div>
-    </c:if>
+<c:if test="${!empty user}">
+    <div class="panel panel-default" id="main" style="">
+        <a href="/topic/cream/${topic.id}/1">置为精华</a>
+    </div>
+</c:if>
 
 </div>
 <!-- 引入侧边栏文件 -->

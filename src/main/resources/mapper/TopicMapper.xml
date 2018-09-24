@@ -126,6 +126,13 @@
     </if>
   </select>
 
+  <update id="judgeCream"  >
+    update topic
+    set
+    is_cream = 1
+    where id = #{arg0,jdbcType=INTEGER}
+  </update>
+
   <select id="listMostCommentsTopics" resultMap="mostCommentsTopic">
     SELECT topic.id,topic.title,count(reply.id) as count_replies  from topic ,reply  where topic.id = reply.topic_id group by topic.id order by count_replies desc limit 5;
   </select>

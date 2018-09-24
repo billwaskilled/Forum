@@ -54,4 +54,6 @@ public class TopicServiceImpl implements TopicService {
     }
 
     public List<Topic> listTopicsAndUsersOfCream() {return topicDao.listTopicsAndUsersOfCream();}
+
+    public void judgeCream(Integer topicId,Integer value){topicDao.judgeCream(topicId,value);}
 }
